@@ -52,7 +52,5 @@ public class BoardServiceImpl implements BoardService {
 	public void deleteBoardInfo(int boardNum) {
 		boardDao.deleteBoardInfo(boardNum);
 	}
-	
-
 
 }

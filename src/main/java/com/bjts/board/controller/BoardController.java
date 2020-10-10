@@ -47,8 +47,8 @@ public class BoardController {
 		if(query == null)
 			query = "";
 		int n_page = Integer.parseInt(page);
-		int startNum = 1+(n_page-1)*10;
-		int lastNum = n_page*10;
+		int startNum = (n_page-1)*10;
+		int lastNum = n_page*10-1;
 		HashMap<String , String> map = new HashMap<String , String>();
 		map.put("field", field);
 		map.put("query", query);
@@ -60,6 +60,7 @@ public class BoardController {
 		model.addAttribute("boardInfo", boardlist);
 		model.addAttribute("page", page);
 		model.addAttribute("count", count);
+		System.out.println(count);
 		return "board/list_board";
 	}
 	
@@ -111,6 +112,7 @@ public class BoardController {
         logger.info("view()-POST");
         replyVO.setRe_userId((String)session.getAttribute("userId"));
         replyVO.setRe_userNickname((String)session.getAttribute("userNickname"));
+        System.out.println(replyVO.getRe_content());
         replyService.insertReplyInfo(replyVO);
         return "redirect:/list/view?boardNum="+replyVO.getRe_boardId(); // 매핑오류나면 볼것
     }

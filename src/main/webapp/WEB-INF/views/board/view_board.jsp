@@ -6,18 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>${board.boardTitle}</title>
-<style type="text/css">
-.update-reply {
-	display: none
-}
-</style>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="/board/css/view.css">
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
 	rel='stylesheet' type='text/css'>
@@ -43,23 +37,23 @@ function undo(mod_reply){
 	$('#'+mod_reply).css("display","none");
 	}
 </script>
-
+<link rel="stylesheet" href="/board/css/view.css">
 </head>
 <body>
 <header>
 		<div class="container">
-			<h1>Spring Project</h1>
+			<h1><a id="h1-sp" href="/board">Spring Project</a></h1>
 			<nav>
 				<a href="/board/list">게시판</a>
 				<c:if test="${userId == null}">
-					<a href="login">로그인</a>
-					<a href="sign_up">회원가입</a>
+					<a href="/board/login">로그인</a>
+					<a href="/board/sign_up">회원가입</a>
 				</c:if>
 				<c:if test="${userId != null}">
-					<a href="logout">로그아웃</a>
-					<a href="mypage">마이페이지</a>
+					<a href="/board/logout">로그아웃</a>
+					<a href="/board/mypage">마이페이지</a>
 				</c:if>
-				<a href="https://github.com/bj-ts/Spring-Web-Board">GITHUB</a>
+				<a href="https://github.com/BJwebgit/Spring-Web-Board">GITHUB</a>
 			</nav>
 		</div>
 	</header>
@@ -107,7 +101,7 @@ function undo(mod_reply){
 
 
 	<div class="form-group" id="write-reply-group">
-		<form action="view/write_reply" method="POST">
+		<form action="/board/list/view/write_reply" method="POST">
 			<input type="hidden" name="re_boardId" value="${board.idNum}">
 			<textarea class="form-control" id="exampleFormControlTextarea1"
 				name="re_content" rows="3" placeholder="댓글 입력란"></textarea>
@@ -131,8 +125,7 @@ function undo(mod_reply){
 						<i class="fas fa-eject fa-2x"></i>
 					</button>
 					<button class="reply-modi-update">
-						<a id="reply-delete-a"
-							href="/board/list/delete_reply?replyNum=${reply.re_idNum}&boardNum=${board.idNum}">
+						<a id="reply-delete-a"	href="/board/list/delete_reply?replyNum=${reply.re_idNum}&boardNum=${board.idNum}">
 							<i class="fas fa-trash-alt fa-2x"></i>
 						</a>
 					</button></td>

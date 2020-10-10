@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-	margin: 0 10%;
-	padding: 0;
-	font-family: sans-serif;
-	background: url(../images/5.jpg) no-repeat fixed center;
-	background-size: cover;
+    margin: 0 10%;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(../images/5.jpg) no-repeat fixed center;
+    background-size: cover;
 }
 body::before {
-	content: "";
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: rgba(0, 0, 0, .7);
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
 }
 .write-form{
-	position:relative;
-	z-index: 2;
-	color:white;
+    position:relative;
+    z-index: 2;
+    color:white;
 }
 .submit-btn{
   margin-top:5px;
@@ -35,21 +35,26 @@ body::before {
 }
 
 #write-submit:hover{
-	color: #4caf50;
-	font-size:30px;
-	font:bold;
+    color: #4caf50;
+    font-size:30px;
+    font:bold;
+}
+
+#main-top{
+	margin-top:100px;
 }
 
 .title-content{
-	font-family: 'Nanum Gothic', sans-serif;
-	font-size: 40px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 40px;
 }
 button#write-submit{
-	position:relative;
-	z-index:2;
+    position:relative;
+    z-index:2;
 }
 /* home.css */
 a{text-decoration: none; color: white;}
+a:hover{text-decoration: none; color:#4caf50;}
 
 .container{
     max-width: 1200px; margin: 0 auto;
@@ -69,8 +74,14 @@ header nav{
     font-size:24px;
 }
 
+
 header nav a{
     font-size: 16px; color: #fff;
     display: inline-block; vertical-align: middle;
     padding: 5px; margin: 0 10px;
+}
+
+#h1-sp{
+    text-decoration: none;
+    color : white;
 }

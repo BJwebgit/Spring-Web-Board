@@ -20,5 +20,4 @@ public interface BoardService {
 	void insertBoardInfo(BoardVO boardVo);
 
 	void updateBoardInfo(BoardVO boardVo);
-
 }

@@ -32,6 +32,9 @@ td{
 	z-index:2;
 	color: white;
 }
+.update-reply {
+	display: none
+}
 .table-left{
 	width: 120px;
 }
@@ -104,7 +107,7 @@ input#reg-reply:hover{
 }
 /* home.css */
 a{text-decoration: none; color: white;}
-
+a:hover{text-decoration: none; color:#4caf50;}
 .container{
     max-width: 1200px; margin: 0 auto;
     position: relative;}

@@ -7,6 +7,16 @@
 	box-sizing: border-box;
 }
 
+#h1-sp{
+    text-decoration: none;
+    color : white;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#4caf50;
+}
+
 body {
 	margin: 0 0;
 	padding: 0;
@@ -173,34 +183,4 @@ body::before {
 }
 .pagination>li>a:hover, .pagination>li>span:hover{
 	background: #4caf50;
-}
-/* home.css */
-a{text-decoration: none; color: white;}
-
-.container{
-    max-width: 1200px; margin: 0 auto;
-    position: relative;}
-header{
-	background:black;
-    position: fixed; z-index:99;
-    top:0; left:0; right:0;
-    padding: 25px;
-}
-header h1{
-    font-size: 50x; color:#fff;
-}
-
-header nav{
-    position: absolute; z-index: 2;
-    top: 0; right: 0;
-    font-size:24px;
-}
-
-header nav a{
-    font-size: 16px; color: #fff;
-    display: inline-block; vertical-align: middle;
-    padding: 5px; margin: 0 10px;
-}
-#list-free-board{
-	margin-top:90px;
 }

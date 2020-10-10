@@ -15,7 +15,7 @@
 
 	<header>
 		<div class="container">
-			<h1>Spring Project</h1>
+			<h1><a id="h1-sp" href="/board">Spring Project</a></h1>
 			<nav>
 				<a href="list">게시판</a>
 				<c:if test="${userId == null}">
@@ -26,7 +26,7 @@
 					<a href="logout">로그아웃</a>
 					<a href="mypage">마이페이지</a>
 				</c:if>
-				<a href="https://github.com/bj-ts/Spring-Web-Board">GITHUB</a>
+				<a href="https://github.com/BJwebgit/Spring-Web-Board">GITHUB</a>
 			</nav>
 		</div>
 	</header>

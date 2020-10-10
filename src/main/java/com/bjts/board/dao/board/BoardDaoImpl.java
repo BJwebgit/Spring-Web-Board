@@ -26,8 +26,8 @@ public class BoardDaoImpl implements BoardDao {
 	@Override
 	public List<BoardVO> getBoardInfoAll(HashMap<String, String> map) {
 		String field = map.get("field");
+		System.out.println(field + " / " +map.get("query"));
 		if(!field.equals("titleNick")) {
-			System.out.println("here");
 			return sqlSession.selectList(namespace + ".getBoardInfoAll", map);
 		}
 		else {
@@ -41,11 +41,13 @@ public class BoardDaoImpl implements BoardDao {
 	public int getBoardCount(String field, String query) {
 		HashMap<String , String> map = new HashMap<String , String>();
 		if(!field.equals("titleNick")) {
+			System.out.println(field + " / " +query);
 			map.put("field", field);
 			map.put("query", query);
 			return sqlSession.selectOne(namespace + ".getBoardCount", map);
 		}
 		else {
+			System.out.println(field + " // " +query);
 			map.put("query", query);
 			map.put("userNickname", "userNickname");
 			map.put("boardTitle", "boardTitle");
