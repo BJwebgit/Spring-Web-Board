@@ -7,7 +7,7 @@ Spring framework를 이용해서 구현하였고, MySQL,Oracle을 이용한 회�
 
 컴포넌트 구조 설명
 ----------
-
+[java]
 * Controller
   * MemberController.java (회원관련 CRUD, Ajax에 사용하는 DB값 매핑 컨트롤러)
   * BoardController.java  (게시판&댓글 CRUD 매핑 컨트롤러)
@@ -43,3 +43,6 @@ Spring framework를 이용해서 구현하였고, MySQL,Oracle을 이용한 회�
 * Validator
   * MemberValidator.java (Validator 인터페이스를 상속받아 회원가입시 서버측에서 폼값 검증을 위한 클래스)
   * MemberUpdateValidator.java  (Validator 인터페이스를 상속받아 회원정보 수정시 서버측에서 폼값 검증을 위한 클래스)
+* JS(javascript)
+  * sign_up.js (회원가입 시 Ajax를 이용해 클라이언트에서 폼값 검증을 위한 JS)
+  * modify_member.js  (회원정보 수정시 Ajax를 이용해 클라이언트에서 폼값 검증을 위한 JS)
