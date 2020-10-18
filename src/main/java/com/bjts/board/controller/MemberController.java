@@ -191,7 +191,7 @@ public class MemberController {
 		return memberService.getMemberId(check_id);
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, value="/check_nickname_ajax")
+	@RequestMapping(method = RequestMethod.POST, value="/check_nickname_ajax", produces = "application/text; charset=utf8")
 	@ResponseBody
 	public String check_nickname_ajax(MemberVO memberVO) {
 		logger.info("check_nickname_ajax()-POST");
