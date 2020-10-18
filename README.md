@@ -38,3 +38,8 @@ Spring framework를 이용해서 구현하였고, MySQL,Oracle을 이용한 회�
     * BoardVO.java (데이터베이스 레코드의 데이터를 매핑하기위한 Board데이터 객체)
   * reply
     * ReplyVO.java (데이터베이스 레코드의 데이터를 매핑하기위한 Reply데이터 객체)
+* Intercepter
+  * AuthenticationInterceptor.java (페이지 접근시 로그인 인증을 위한 컨트롤러)
+* Validator
+  * MemberValidator.java (Validator 인터페이스를 상속받아 회원가입시 서버측에서 폼값 검증을 위한 클래스)
+  * MemberUpdateValidator.java  (Validator 인터페이스를 상속받아 회원정보 수정시 서버측에서 폼값 검증을 위한 클래스)
