@@ -31,3 +31,10 @@ Spring framework를 이용해서 구현하였고, MySQL,Oracle을 이용한 회�
   * reply
     * ReplyDao.java (ReplyDao 인터페이스)
     * ReplyDaoImpl.java (ReplyDao 인터페이스를 상속받아 DB에 접근해 데이터를 조작하는 ReplyDao객체)
+* Domain
+  * member
+    * MemberVO.java (데이터베이스 레코드의 데이터를 매핑하기위한 Member데이터 객체)
+  * board
+    * BoardVO.java (데이터베이스 레코드의 데이터를 매핑하기위한 Board데이터 객체)
+  * reply
+    * ReplyVO.java (데이터베이스 레코드의 데이터를 매핑하기위한 Reply데이터 객체)
